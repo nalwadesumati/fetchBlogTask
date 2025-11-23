@@ -91,7 +91,8 @@ const onremove = (ele) => {
                     cl(data)
 
                     //IF API CALL SUCCESS THEN REMOVE FROM UI
-                    ele.closest('.col-md-3').remove();
+                    ele.closest('.card').remove();
+
                     snackbar(`The blog with id ${REMOVE_ID} is removed successfully!!!`, "success");
 
 
