@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Blog App</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card p-4 mb-4">
+                    <form id="blogForm">
+                        <div class="form-group">
+                            <label for="postTitle">Title</label>
+                            <input type="text" class="form-control" id="postTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postContent">Content</label>
+                            <textarea rows="4" class="form-control" id="postContent" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userId" class="form-label">User Id</label>
+                            <select id="userId" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline-primary btn-sm btn-block" id="AddpostBtn">Add
+                                Card</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm btn-block d-none"
+                                id="updatePostBtn">Update Card</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row" id="postContainer">
+            <div class="col-md-3">
+                <div class="card mb-5" id="1">
+                    <div class="card-header">
+                        <h3>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            quia et suscipit
+                            suscipit recusandae consequuntur expedita et cum
+                            reprehenderit molestiae ut ut quas totam
+                            nostrum rerum est autem sunt rem eveniet architecto
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-outline-primary btn-sm" onclick="onEdit(this)">Edit</button>
+                        <button class="btn btn-outline-danger btn-sm removeBtn" onclick="onremove(this)">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader d-none" id="loader">
+        <div class="spinner-border text-primary" role="status">
+        </div>
+        <p>Loading...</p>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script src="./assets/js/app.js"></script>
+
+
+</body>
+
+</html>
