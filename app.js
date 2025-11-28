@@ -295,9 +295,8 @@ function onUpdate() {
 
             blogForm.reset();
 
-            updatePostBtn.classList.remove("d-none");
-            AddpostBtn.classList.add("d-none");
-
+            updatePostBtn.classList.add("d-none");
+            AddpostBtn.classList.remove("d-none");
             snackbar(`The post of id=${UPDATED_ID} updated successfully`, "success")
 
             blogForm.reset()
@@ -1673,6 +1672,7 @@ blogForm.addEventListener("submit", onblogAdd)
 // updatePostBtn.addEventListener("click", onUpdate);
 
 // blogForm.addEventListener("submit", onblogAdd)
+
 
 
 
